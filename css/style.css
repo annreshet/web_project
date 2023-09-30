@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    background: #A8C9F0;
+    font-family: "Trebuchet MS", serif;
+    /*font-family: Arial, serif;*/
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background: #2277E0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin: 0;
+    /*padding: 0 100px;*/
+    box-sizing: border-box;
+    border: 1.4px solid black;
+}
+
+.logo {
+    background: #164F94;
+    width: 60px;
+    border-left: 1.4px solid black;
+    border-right: 1px solid black;
+}
+
+.name {
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 250px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.location {
+    width: 160px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.categories {
+    display: flex;
+    width: 59%;
+    font-size: 24px;
+    position: relative;
+}
+
+.category {
+    /*width: 210px;*/
+    width: 33.33%;
+    padding: 0 16.2%;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.login {
+    width: 15%;
+    /*margin-left: auto;*/
+    box-sizing: border-box;
+    border-left: 1.4px solid black;
+    border-right: 1.4px solid black;
+}
+
+main {
+    background: #A8C9F0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: flex;
+}
+
+.main-content {
+    width: 80%;
+    height: auto;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.aside-content {
+    width: 20%;
+    height: auto;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(30% - 15px);
+    height: 350px;
+    margin: 15px;
+    background: #2277E0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 8%;
+}
+
+.card img {
+    text-align: center;
+    width: 100%;
+    height: 230px;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 8%;
+}
+
+.aside-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 8%;
+}
+
+.aside-content section {
+    height: auto;
+}
+
+.aside-card {
+    width: 100%;
+    height: 175px;
+    margin: 15px 0;
+    background: #2277E0;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 8%;
+}
+
+.culture-list {
+    position: absolute;
+    top: 58.5px;
+    left: 0;
+    height: 115px;
+    width: 33.33%;
+    background: orange;
+    display: none;
+}
+
+.entertainment-list {
+    position: absolute;
+    top: 58.5px;
+    left: 33.33%;
+    height: 135px;
+    width: 33.33%;
+    background: blue;
+    display: none;
+}
+
+.display-list:hover .culture-list, .culture-list:hover{
+    display: block;
+}
+
+.display-list:hover .entertainment-list, .entertainment-list:hover{
+    display: block;
+}
+
+footer {
+    background: #A8C9F0;
+    color: black;
+    width: 100%;
+    height: auto;
+}
+
+pre {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 10px; /* Установите желаемый размер шрифта */
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+}
+
+q {
+    cursor: pointer;
+}
