@@ -53,6 +53,7 @@ header {
     width: 142px;
     background: #164F94;
     display: none;
+    z-index: 2;
 }
 
 .location:hover .cities-list, .cities-list:hover{
@@ -125,6 +126,8 @@ section h2 {
     overflow: hidden;
     border-radius: 8%;
     color: whitesmoke;
+    text-align: center;
+    filter: drop-shadow(1rem 1rem 10px #164F94);
 }
 
 .card img {
@@ -153,9 +156,21 @@ section h2 {
     height: 200px;
     margin: 15px 0;
     background: #2277E0;
+    color: whitesmoke;
+    text-align: center;
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    border-radius: 8%;
+    filter: drop-shadow(1rem 1rem 10px #164F94);
+}
+
+.aside-card img {
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    object-fit: cover;
     border-radius: 8%;
 }
 
@@ -167,6 +182,7 @@ section h2 {
     width: 33.33%;
     background: #164F94;
     display: none;
+    z-index: 2;
 }
 
 .entertainment-list {
@@ -177,6 +193,7 @@ section h2 {
     width: 33.33%;
     background: #164F94;
     display: none;
+    z-index: 2;
 }
 
 .display-list:hover .culture-list, .culture-list:hover{
@@ -192,6 +209,10 @@ footer {
     color: whitesmoke;
     width: 100%;
     height: auto;
+}
+
+.footer-right {
+    text-align: right;
 }
 
 pre {
