@@ -19,52 +19,66 @@ header {
     color: whitesmoke;
     /*padding: 0 100px;*/
     box-sizing: border-box;
-    border: 1.4px solid black;
+    border: 1.4px solid whitesmoke;
 }
 
 .logo {
     background: #164F94;
     width: 60px;
-    border-left: 1.4px solid black;
-    border-right: 1px solid black;
+    border-left: 1.4px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
 }
 
 .name {
     padding: 0 15px;
     box-sizing: border-box;
     width: 250px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    position: relative;
 }
 
 .location {
     width: 160px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    display: flex;
+}
+
+.cities-list {
+    position: absolute;
+    top: 58.5px;
+    left: 290px;
+    height: 140px;
+    width: 142px;
+    background: #164F94;
+    display: none;
+}
+
+.location:hover .cities-list, .cities-list:hover{
+    display: block;
 }
 
 .categories {
     display: flex;
-    width: 59%;
+    width: 59.6%;
     font-size: 24px;
     position: relative;
 }
 
 .category {
-    /*width: 210px;*/
     width: 33.33%;
     padding: 0 16.2%;
     box-sizing: border-box;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
 }
 
 .login {
     width: 15%;
-    /*margin-left: auto;*/
     box-sizing: border-box;
-    border-left: 1.4px solid black;
-    border-right: 1.4px solid black;
+    border-left: 1.4px solid whitesmoke;
+    border-right: 1.4px solid whitesmoke;
 }
 
 main {
@@ -174,15 +188,15 @@ section h2 {
 }
 
 footer {
-    background: #A8C9F0;
-    color: black;
+    background: #164F94;
+    color: whitesmoke;
     width: 100%;
     height: auto;
 }
 
 pre {
     font-family: "Courier New", Courier, monospace;
-    font-size: 10px; /* Установите желаемый размер шрифта */
+    font-size: 10px;
 }
 
 code {
