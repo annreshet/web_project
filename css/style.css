@@ -17,16 +17,26 @@ header {
     display: flex;
     margin: 0;
     color: whitesmoke;
-    /*padding: 0 100px;*/
     box-sizing: border-box;
     border: 1.4px solid whitesmoke;
+    position: fixed;
+    top: 0;
+    z-index: 2;
 }
 
 .logo {
-    background: #164F94;
+    box-sizing: border-box;
+    position: relative;
+    /*background: whitesmoke;*/
+    background: #2277E0;
     width: 60px;
-    border-left: 1.4px solid whitesmoke;
+    border-left: 1px solid whitesmoke;
     border-right: 1px solid whitesmoke;
+    padding: 5px;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
 }
 
 .name {
@@ -37,20 +47,23 @@ header {
     border-right: 1px solid whitesmoke;
     position: relative;
 }
-
+li {
+    margin-left: -13px
+}
 .location {
     width: 160px;
     border-left: 1px solid whitesmoke;
     border-right: 1px solid whitesmoke;
     display: flex;
+    position: relative;
 }
 
 .cities-list {
     position: absolute;
-    top: 58.5px;
-    left: 290px;
+    bottom: -140px;
+    left: 0;
     height: 140px;
-    width: 142px;
+    width: 100%;
     background: #164F94;
     display: none;
     z-index: 2;
@@ -86,8 +99,9 @@ main {
     background: #A8C9F0;
     width: 100%;
     height: auto;
-    margin: 0;
+    margin: 60px 0 0;
     display: flex;
+    z-index: 1;
 }
 
 .main-content {
@@ -111,13 +125,14 @@ section h2 {
 
 .cards {
     width: 100%;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns: 33% 33% 33%;
+    /*justify-content: space-between;*/
 }
 
 .card {
-    width: calc(30% - 15px);
+    /*width: calc(30% - 15px);*/
     height: 350px;
     margin: 15px;
     background: #2277E0;
@@ -231,4 +246,149 @@ q {
 
 a {
     color:whitesmoke;
+}
+
+@media screen and (max-width: 1100px) {
+    main {
+        margin-top: 120px;
+    }
+    .location {
+        margin-left: auto;
+    }
+    .login {
+        width: 200px;
+    }
+
+    .categories {
+        position: absolute;
+        top: 59px;
+        left: -1px;
+        background: #2277E0;
+        width: calc(100% + 2px);
+        height: 60px;
+        display: flex;
+        margin: 0;
+        color: whitesmoke;
+        /*padding: 0 100px;*/
+        box-sizing: border-box;
+        border: 1.4px solid whitesmoke;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .main-content {
+        width: 70%;
+        padding: 0;
+    }
+    .main-content h2 {
+        margin-left: 15px
+    }
+    .aside-content{
+        width: 30%;
+        padding: 0 10px;
+    }
+    .aside-content section h2 {
+        margin-bottom: 25px;
+    }
+    .aside-cards{
+        gap: 20px;
+    }
+    .aside-card {
+        height: 250px;
+        padding: 15px;
+        margin: 0
+    }
+    .aside-card img {
+        height: 150px;
+    }
+    .cards {
+        grid-template-columns: 50% 50%;
+    }
+    .card {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 690px) {
+    .name h1{
+        font-size: 28px;
+    }
+    .login {
+        width: 180px;
+    }
+    .location, .login {
+        font-size: 14px;
+    }
+    .cards {
+        grid-template-columns: 100%;
+    }
+    .card {
+        height: 320px;
+    }
+    .main-content, .aside-content {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 650px) {
+    main {
+        margin-top: 174px;
+    }
+    .name, .logo {
+        border: none;
+    }
+    .name {
+        padding: 0;
+        width: auto;
+    }
+    .categories {
+        top: 118px
+    }
+    .location {
+        position: absolute;
+        top: 58px;
+        left: -1px;
+        background: #2277E0;
+        width: 50%;
+        height: 60px;
+        display: flex;
+        margin: 0;
+        color: whitesmoke;
+        box-sizing: border-box;
+        border: 1.4px solid whitesmoke;
+        font-size: 16px;
+    }
+    .login {
+        position: absolute;
+        top: 58px;
+        left: calc(50% - 1px);
+        background: #2277E0;
+        width: calc(50% + 2px);
+        height: 60px;
+        display: flex;
+        margin: 0;
+        color: whitesmoke;
+        box-sizing: border-box;
+        border: 1.4px solid whitesmoke;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .category {
+        font-size: 20px;
+    }
+    .card {
+        height: 240px;
+        font-size: 14px;
+    }
+    .card img {
+        height: 130px;
+    }
+    .aside-content{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .category {
+        font-size: 16px;
+    }
+
 }
