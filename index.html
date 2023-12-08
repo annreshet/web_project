@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>EventsForYou</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/pageLoadTime.js"></script>
+    <script src="scripts/activeLocation.js"></script>
 </head>
 <body>
     <header class="header">
-        <div class="logo"></div>
-        <div class="name center"><h1>EventsForYou</h1></div>
+        <div class="logo">
+            <img class="center" src="images/logo.png" alt="Логотип" />
+        </div>
+        <div class="name center"><a href="index.html"><h1>EventsForYou</h1></a></div>
         <div class="location center">
             <div class="cities-list">
                 <ul>
@@ -21,85 +25,86 @@
             <p>Санкт-Петербург</p>
         </div>
         <div class="categories">
-            <nav class="category center display-list">КУЛЬТУРА
+            <nav class="category center display-list"><a  id="culture" href="culture.html">КУЛЬТУРА</a>
                 <div class="culture-list">
                     <ul>
-                        <li><a href="#">Выставки</a></li>
-                        <li><a href="#">Музеи</a></li>
-                        <li><a href="#">Экскурсии</a></li>
+                        <li><a href="culture.html#exhibitions">Выставки</a></li>
+                        <li><a href="culture.html#museum">Музеи</a></li>
+                        <li><a href="culture.html#excursions">Экскурсии</a></li>
                     </ul>
                 </div>
             </nav>
-            <nav class="category center display-list">РАЗВЛЕЧЕНИЯ
+            <nav id="entertainment" class="category center display-list"><a href="entertainment.html">РАЗВЛЕЧЕНИЯ</a>
                 <div class="entertainment-list">
                     <ul>
-                        <li><a href="#">Кино</a></li>
-                        <li><a href="#">Фестивали</a></li>
-                        <li><a href="#">Стендапы</a></li>
-                        <li><a href="#">Вечеринки</a></li>
+                        <li><a href="entertainment.html#cinema">Кино</a></li>
+                        <li><a href="entertainment.html#festivals">Фестивали</a></li>
+                        <li><a href="entertainment.html#standups">Стендапы</a></li>
+                        <li><a href="entertainment.html#parties">Вечеринки</a></li>
                     </ul>
                 </div>
             </nav>
-            <nav class="category center">ДЕТЯМ</nav>
+            <nav id="kids" class="category center"><a href="kids.html">ДЕТЯМ</a></nav>
         </div>
         <div class="login center"> <a href="#">Вход</a> / <a href="#">Регистрация</a> </div>
     </header>
 
     <main>
-        <div class="main-content">
-            <section>
-                <h2>Все мероприятия</h2>
-                <div class="cards">
-                    <article class="card">
-                        <img class="center" src="./images/st-petersburg.jpg" alt="Санкт-Петербург"/>
-                        <p>Обзорная экскурсия по Санкт-Петербургу</p>
-                    </article>
-                    <article class="card"><img class="center" src="./images/pict.jpg" alt="Санкт-Петербург" /></article>
-                    <article class="card"></article>
-                    <article class="card"></article>
-                    <article class="card"></article>
-                    <article class="card"></article>
+        <div class="flex">
+            <div class="main-content">
+                <section>
+                    <h2>Мероприятия</h2>
+                    <div class="cards">
+                        <article class="card">
+                            <img class="center" src="images/st-petersburg.jpg" alt="Набережная"/>
+                            <p>Обзорная экскурсия по <br>Санкт-Петербургу</p>
+                        </article>
+                        <article class="card">
+                            <img class="center" src="images/pict.jpg" alt="Собор" />
+                            <p>Экскурсия по соборам и храмам</p>
+                        </article>
+                        <article class="card">
+                            <img class="center" src="images/bar.jpg" alt="Бар" />
+                            <p>Открытие нового бара <br>"Опыт"</p>
+                        </article>
+                        <article class="card">
+                            <img class="center" src="images/channels.png" alt="Каналы">
+                            <p>Речная прогулка по каналам Петербурга</p>
+                        </article>
+                        <article class="card">
+                            <img class="center" src="images/cinema-festival.png" alt="Постер кинофестиваля">
+                            <p>Кинофестиваль студенческих работ "Свой зал"</p>
+                        </article>
+                        <article class="card">
+                            <img class="center" src="images/kids.jpg" alt="Ребенок в океанариуме">
+                            <p>Куда сходить с ребёнком?</p>
+                        </article>
 
-                </div>
-            </section>
-        </div>
-        <div class="aside-content">
-            <section>
-                <h2>Популярное</h2>
-                <div class="aside-cards">
-                    <aside class="aside-card">
-                    </aside>
-                </div>
-            </section>
+                    </div>
+                </section>
+            </div>
+            <div class="aside-content">
+                <section>
+                    <h2>Популярное</h2>
+                    <div class="aside-cards">
+                        <aside class="aside-card">
+                            <img class="center" src="images/halloween.jpg" alt="Хэллоуин">
+                            <p>Лучшие вечеринки в Хэллоуин</p>
+                        </aside>
+                        <aside class="aside-card">
+                            <img class="center" src="images/date.jpg" alt="Свидание">
+                            <p>10 идей для первого свидания</p>
+                        </aside>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
     <footer>
-        <pre>
-                                                         .''.
-                   .''.             *''*    :_\/_:     .
-                  :_\/_:   .    .:.*_\/_*   : /\ :  .'.:.'.
-              .''.: /\ : _\(/_  ':'* /\ *  : '..'.  -=:o:=-
-             :_\/_:'.:::. /)\*''*  .|.* '.\'/.'_\(/_'.':'.'
-             : /\ : :::::  '*_\/_* | |  -= o =- /)\    '  *
-              '..'  ':::'   * /\ * |'|  .'/.\'.  '._____
-                  *        __*..* |  |     :      |.   |' .---"|
-                   _*   .-'   '-. |  |     .--'|  ||   | _|    |
-                .-'|  _.|  |    ||   '-__  |   |  |    ||      |
-                |' | |.    |    ||       | |   |  |    ||      |
-             ___|  '-'     '    ""       '-'   '-.'    '`      |____
-        </pre>
-        <p>Пожалуй, <code>i</code> — самое часто встречающееся имя переменной.</p>
-
-        <p>
-            Великая актриса Фаина Раневская часто говорила:
-            <q cite="https://www.soyuz.ru/articles/889">
-                Жизнь слишком коротка, чтобы тратить её на диеты, жадных мужчин и плохое
-                настроение.
-            </q>
-        </p>
-        <p><strong>Я</strong> <del>не</del> <em>умею использовать</em> <ins>тэги</ins>.</p>
-
-        <p>2<sup>2</sup> = 2 * 2</p>
+        <div class="footer-right">
+            <p>Решетникова Анна</p>
+            <p class="time"></p>
+        </div>
     </footer>
 </body>
 </html>

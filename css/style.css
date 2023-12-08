@@ -17,16 +17,26 @@ header {
     display: flex;
     margin: 0;
     color: whitesmoke;
-    /*padding: 0 100px;*/
     box-sizing: border-box;
     border: 1.4px solid whitesmoke;
+    position: fixed;
+    top: 0;
+    z-index: 2;
 }
 
 .logo {
-    background: #164F94;
+    box-sizing: border-box;
+    position: relative;
+    /*background: whitesmoke;*/
+    background: #2277E0;
     width: 60px;
-    border-left: 1.4px solid whitesmoke;
+    border-left: 1px solid whitesmoke;
     border-right: 1px solid whitesmoke;
+    padding: 5px;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
 }
 
 .name {
@@ -37,22 +47,26 @@ header {
     border-right: 1px solid whitesmoke;
     position: relative;
 }
-
+li {
+    margin-left: -13px
+}
 .location {
     width: 160px;
     border-left: 1px solid whitesmoke;
     border-right: 1px solid whitesmoke;
     display: flex;
+    position: relative;
 }
 
 .cities-list {
     position: absolute;
-    top: 58.5px;
-    left: 290px;
+    bottom: -140px;
+    left: 0;
     height: 140px;
-    width: 142px;
+    width: 100%;
     background: #164F94;
     display: none;
+    z-index: 2;
 }
 
 .location:hover .cities-list, .cities-list:hover{
@@ -85,8 +99,8 @@ main {
     background: #A8C9F0;
     width: 100%;
     height: auto;
-    margin: 0;
-    display: flex;
+    margin: 60px 0 0;
+    z-index: 1;
 }
 
 .main-content {
@@ -110,13 +124,13 @@ section h2 {
 
 .cards {
     width: 100%;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns: 33% 33% 33%;
 }
 
 .card {
-    width: calc(30% - 15px);
+    /*width: calc(30% - 15px);*/
     height: 350px;
     margin: 15px;
     background: #2277E0;
@@ -125,6 +139,8 @@ section h2 {
     overflow: hidden;
     border-radius: 8%;
     color: whitesmoke;
+    text-align: center;
+    filter: drop-shadow(1rem 1rem 10px #164F94);
 }
 
 .card img {
@@ -153,9 +169,21 @@ section h2 {
     height: 200px;
     margin: 15px 0;
     background: #2277E0;
+    color: whitesmoke;
+    text-align: center;
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    border-radius: 8%;
+    filter: drop-shadow(1rem 1rem 10px #164F94);
+}
+
+.aside-card img {
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    object-fit: cover;
     border-radius: 8%;
 }
 
@@ -167,6 +195,7 @@ section h2 {
     width: 33.33%;
     background: #164F94;
     display: none;
+    z-index: 2;
 }
 
 .entertainment-list {
@@ -177,6 +206,7 @@ section h2 {
     width: 33.33%;
     background: #164F94;
     display: none;
+    z-index: 2;
 }
 
 .display-list:hover .culture-list, .culture-list:hover{
@@ -192,6 +222,10 @@ footer {
     color: whitesmoke;
     width: 100%;
     height: auto;
+}
+
+.footer-right {
+    text-align: right;
 }
 
 pre {
@@ -210,4 +244,235 @@ q {
 
 a {
     color:whitesmoke;
+    text-decoration: none;
+}
+
+.active {
+    text-decoration: underline whitesmoke;
+}
+
+form {
+    margin: 150px auto 30px;
+    width: 480px;
+    height: 450px;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 3px solid #164F94;
+    border-radius: 20px
+}
+form label {
+    margin: 0 auto;
+}
+form input, textarea{
+    margin: 0 auto 15px;
+    height: 40px;
+    width: 350px;
+    border-radius: 15px;
+    color: #164F94;
+    font-size: 18px;
+    padding: 0 10px;
+    border: 3px solid #164F94;
+}
+form textarea {
+    height: 120px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+form input::placeholder, textarea::placeholder {
+    color: #164F94;
+}
+form input[type="submit"]{
+    background: #164F94;
+    color: whitesmoke;
+}
+form h2 {
+    text-align: center;
+    color: #164F94;
+    font-size: 32px;
+    margin: 15px 10px;
+}
+.flex {
+    display: flex;
+}
+.eventTitle {
+    text-align: center;
+    color: #164F94;
+    font-size: 32px;
+    margin: 15px 10px;
+}
+.events {
+    width: 60%;
+    margin: 10px auto;
+}
+.event {
+    margin: 15px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 3px solid #164F94;
+    border-radius: 15px;
+    color: #164F94;
+}
+.event h3 {
+    margin: 0;
+    font-size: 28px;
+}
+.event p {
+    margin: 10px 0;
+}
+.formDescription {
+    margin: 5px;
+    font-size: 20px;
+}
+
+.formDate {
+    font-size: 14px;
+}
+@media screen and (max-width: 1100px) {
+    main {
+        margin-top: 120px;
+    }
+    .location {
+        margin-left: auto;
+    }
+    .login {
+        width: 200px;
+    }
+
+    .categories {
+        position: absolute;
+        top: 59px;
+        left: -1px;
+        background: #2277E0;
+        width: calc(100% + 2px);
+        height: 60px;
+        display: flex;
+        margin: 0;
+        color: whitesmoke;
+        /*padding: 0 100px;*/
+        box-sizing: border-box;
+        border: 1.4px solid whitesmoke;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .main-content {
+        width: 70%;
+        padding: 0;
+    }
+    .main-content h2 {
+        margin-left: 15px
+    }
+    .aside-content{
+        width: 30%;
+        padding: 0 10px;
+    }
+    .aside-content section h2 {
+        margin-bottom: 25px;
+    }
+    .aside-cards{
+        gap: 20px;
+    }
+    .aside-card {
+        height: 250px;
+        padding: 15px;
+        margin: 0
+    }
+    .aside-card img {
+        height: 150px;
+    }
+    .cards {
+        grid-template-columns: 50% 50%;
+    }
+    .card {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .name h1{
+        font-size: 28px;
+    }
+    .login {
+        width: 180px;
+    }
+    .location, .login {
+        font-size: 14px;
+    }
+    .cards {
+        grid-template-columns: 100%;
+    }
+    .card {
+        height: 320px;
+    }
+    .main-content, .aside-content {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main {
+        margin-top: 174px;
+    }
+    .name, .logo {
+        border: none;
+    }
+    .name {
+        padding: 0;
+        width: auto;
+    }
+    .categories {
+        top: 118px
+    }
+    .location {
+        position: absolute;
+        top: 58px;
+        left: -1px;
+        background: #2277E0;
+        width: 50%;
+        height: 60px;
+        display: flex;
+        margin: 0;
+        color: whitesmoke;
+        box-sizing: border-box;
+        border: 1.4px solid whitesmoke;
+        font-size: 16px;
+    }
+    .login {
+        position: absolute;
+        top: 58px;
+        left: calc(50% - 1px);
+        background: #2277E0;
+        width: calc(50% + 2px);
+        height: 60px;
+        display: flex;
+        margin: 0;
+        color: whitesmoke;
+        box-sizing: border-box;
+        border: 1.4px solid whitesmoke;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .category {
+        font-size: 20px;
+    }
+    .card {
+        height: 240px;
+        font-size: 14px;
+    }
+    .card img {
+        height: 130px;
+    }
+    .aside-content{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .category {
+        font-size: 16px;
+    }
+
 }
