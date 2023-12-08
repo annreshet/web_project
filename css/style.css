@@ -100,7 +100,6 @@ main {
     width: 100%;
     height: auto;
     margin: 60px 0 0;
-    display: flex;
     z-index: 1;
 }
 
@@ -245,8 +244,90 @@ q {
 
 a {
     color:whitesmoke;
+    text-decoration: none;
 }
 
+.active {
+    text-decoration: underline whitesmoke;
+}
+
+form {
+    margin: 150px auto 30px;
+    width: 480px;
+    height: 450px;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 3px solid #164F94;
+    border-radius: 20px
+}
+form label {
+    margin: 0 auto;
+}
+form input, textarea{
+    margin: 0 auto 15px;
+    height: 40px;
+    width: 350px;
+    border-radius: 15px;
+    color: #164F94;
+    font-size: 18px;
+    padding: 0 10px;
+    border: 3px solid #164F94;
+}
+form textarea {
+    height: 120px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+form input::placeholder, textarea::placeholder {
+    color: #164F94;
+}
+form input[type="submit"]{
+    background: #164F94;
+    color: whitesmoke;
+}
+form h2 {
+    text-align: center;
+    color: #164F94;
+    font-size: 32px;
+    margin: 15px 10px;
+}
+.flex {
+    display: flex;
+}
+.eventTitle {
+    text-align: center;
+    color: #164F94;
+    font-size: 32px;
+    margin: 15px 10px;
+}
+.events {
+    width: 60%;
+    margin: 10px auto;
+}
+.event {
+    margin: 15px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 3px solid #164F94;
+    border-radius: 15px;
+    color: #164F94;
+}
+.event h3 {
+    margin: 0;
+    font-size: 28px;
+}
+.event p {
+    margin: 10px 0;
+}
+.formDescription {
+    margin: 5px;
+    font-size: 20px;
+}
+
+.formDate {
+    font-size: 14px;
+}
 @media screen and (max-width: 1100px) {
     main {
         margin-top: 120px;
@@ -387,14 +468,6 @@ a {
     .aside-content{
         font-size: 14px;
     }
-}
-
-.active {
-    text-decoration: underline whitesmoke;
-}
-
-a {
-    text-decoration: none;
 }
 
 @media screen and (max-width: 450px) {
