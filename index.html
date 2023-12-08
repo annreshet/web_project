@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <title>EventsForYou</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/pageLoadTime.js"></script>
+    <script src="scripts/activeLocation.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="logo">
             <img class="center" src="images/logo.png" alt="Логотип" />
         </div>
-        <div class="name center"><h1>EventsForYou</h1></div>
+        <div class="name center"><a href="index.html"><h1>EventsForYou</h1></a></div>
         <div class="location center">
             <div class="cities-list">
                 <ul>
@@ -23,26 +25,26 @@
             <p>Санкт-Петербург</p>
         </div>
         <div class="categories">
-            <nav class="category center display-list">КУЛЬТУРА
+            <nav class="category center display-list"><a  id="culture" href="culture.html">КУЛЬТУРА</a>
                 <div class="culture-list">
                     <ul>
-                        <li><a href="#">Выставки</a></li>
-                        <li><a href="#">Музеи</a></li>
-                        <li><a href="#">Экскурсии</a></li>
+                        <li><a href="culture.html#exhibitions">Выставки</a></li>
+                        <li><a href="culture.html#museum">Музеи</a></li>
+                        <li><a href="culture.html#excursions">Экскурсии</a></li>
                     </ul>
                 </div>
             </nav>
-            <nav class="category center display-list">РАЗВЛЕЧЕНИЯ
+            <nav id="entertainment" class="category center display-list"><a href="entertainment.html">РАЗВЛЕЧЕНИЯ</a>
                 <div class="entertainment-list">
                     <ul>
-                        <li><a href="#">Кино</a></li>
-                        <li><a href="#">Фестивали</a></li>
-                        <li><a href="#">Стендапы</a></li>
-                        <li><a href="#">Вечеринки</a></li>
+                        <li><a href="entertainment.html#cinema">Кино</a></li>
+                        <li><a href="entertainment.html#festivals">Фестивали</a></li>
+                        <li><a href="entertainment.html#standups">Стендапы</a></li>
+                        <li><a href="entertainment.html#parties">Вечеринки</a></li>
                     </ul>
                 </div>
             </nav>
-            <nav class="category center">ДЕТЯМ</nav>
+            <nav id="kids" class="category center"><a href="kids.html">ДЕТЯМ</a></nav>
         </div>
         <div class="login center"> <a href="#">Вход</a> / <a href="#">Регистрация</a> </div>
     </header>
@@ -99,6 +101,7 @@
     <footer>
         <div class="footer-right">
             <p>Решетникова Анна</p>
+            <p class="time"></p>
         </div>
     </footer>
 </body>
