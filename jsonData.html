@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>EventsForYou</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/pageLoadTime.js"></script>
+    <script src="scripts/activeLocation.js"></script>
+    <script src="scripts/preloader.js"></script>
+</head>
+<body>
+
+<div class="preloader">
+    <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="logo">
+        <img class="center" src="images/logo.png" alt="Логотип" />
+    </div>
+    <div class="name center"><a href="index.html"><h1>EventsForYou</h1></a></div>
+    <div class="location center">
+        <div class="cities-list">
+            <ul>
+                <li><a href="#">Санкт-Петербург</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Казань</a></li>
+                <li><a href="#">Хабаровск</a></li>
+            </ul>
+        </div>
+        <p>Санкт-Петербург</p>
+    </div>
+    <div class="categories">
+        <nav class="category center display-list"><a  id="culture" href="culture.html">КУЛЬТУРА</a>
+            <div class="culture-list">
+                <ul>
+                    <li><a href="culture.html#exhibitions">Выставки</a></li>
+                    <li><a href="culture.html#museum">Музеи</a></li>
+                    <li><a href="culture.html#excursions">Экскурсии</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="entertainment" class="category center display-list"><a href="entertainment.html">РАЗВЛЕЧЕНИЯ</a>
+            <div class="entertainment-list">
+                <ul>
+                    <li><a href="entertainment.html#cinema">Кино</a></li>
+                    <li><a href="entertainment.html#festivals">Фестивали</a></li>
+                    <li><a href="entertainment.html#standups">Стендапы</a></li>
+                    <li><a href="entertainment.html#parties">Вечеринки</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="kids" class="category center"><a href="kids.html">ДЕТЯМ</a></nav>
+    </div>
+    <div class="login center"> <a href="#">Вход</a> / <a href="#">Регистрация</a> </div>
+</header>
+
+<main>
+    <div class="comments"></div>
+</main>
+<footer>
+    <div class="footer-right">
+        <p>Решетникова Анна</p>
+        <p class="time"></p>
+    </div>
+</footer>
+</body>
+</html>
